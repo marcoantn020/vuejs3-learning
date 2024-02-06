@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  vue:
+    image: node:latest
+    container_name: my-node-container
+    working_dir: /usr/src/app
+    ports:
+      - "5173:5173"
+    volumes:
+      - ./:/usr/src/app
+    stdin_open: true
+    tty: true
+    command: npm run serve
